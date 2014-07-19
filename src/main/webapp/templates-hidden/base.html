@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<!-- Google will often use this as its description of your page/site. Make it good. -->
+<link rel="stylesheet" type="text/css" href="/css/jquery.datepick.css" />
+<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/css/structure.css" />
+<link rel="stylesheet" type="text/css" href="/css/table.css" />
+<link rel="stylesheet" type="text/css" href="/css/modalPopUp.css" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.datepick.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> -->
+<script type="text/javascript">
+	$(function() {
+		/* $('#reminder div').not(":first-child").hide();
+		if (($('#reminder > div').size()) > 1) {
+			$('#alert ul').append(
+					" and <a href='#' id='birthdayPopupLink'>+"
+							+ ($('#reminder > div').size() - 1) + "</a>");
+		}
+		$('#birthdayPopupLink')
+				.click(
+						function() {
+							$('.box').css('opacity', '0.5');
+							$('body')
+									.append(
+											"<div id='myModal'><input type='button' onclick='closePopup();' class='close' id='closePopUp' value='&#215;'/>"
+													+ ($('#reminder > div')
+															.not(":first-child")
+															.text()) + "</div>");
+						}); */
+
+		$('#datepicker').datepick({
+			alignment : "bottomRight"
+		});
+		$('.datepick').datepick({
+			alignment : "bottomRight"
+		});
+	});
+
+	$(document).ready(function() {
+		$('span#bdayReminder input').bind('blur', function() {
+			$(this).next().val($(this).val());
+		});
+	});
+	function closePopup() {
+		$('#myModal').remove();
+		$('.box').css('opacity', '1.0');
+	}
+</script>
+
+</head>
+<body>
+	<div id="content"></div>
+</body>
+</html>
