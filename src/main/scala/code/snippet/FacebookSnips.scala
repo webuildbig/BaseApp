@@ -59,7 +59,7 @@ var fbLogin = {
     }
   },
   util: {
-  
+
     wopen: function (url, name, w, h) {
           w += 32;
       h += 96;
