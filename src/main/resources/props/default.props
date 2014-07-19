@@ -1,6 +1,6 @@
 
 # mongo
-host=localhost:9999
+host=localhost:8888
 mongo.default.host=localhost
 mongo.default.port=27017
 mongo.default.name=knol
@@ -17,8 +17,8 @@ mongo.default.name=knol
 
 
 #facebook
-facebook.key=527175957325431
-facebook.secret=45e57475783fc1216dfe65e1183d8ec3
+facebook.key=424761067663335
+facebook.secret=a992af1331a536f2e445c32a79ff6e92
 facebook.callbackurl=/api/facebook/auth
 
 #google
